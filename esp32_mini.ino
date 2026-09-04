@@ -7,11 +7,11 @@
 const char* ssid     = "DDS 2.4G";
 const char* password = "ExpectoPatronumDDS";
 
-// --- Safe Relay Pins Mapping ---
-const int FAN1_PIN  = 16;
-const int FAN2_PIN  = 17;
-const int BULB1_PIN = 25;
-const int BULB2_PIN = 26;
+// --- Safe Relay Pins for ESP32-C3 Super Mini ---
+const int FAN1_PIN  = 2;  // Safe GPIO
+const int FAN2_PIN  = 3;  // Safe GPIO
+const int BULB1_PIN = 4;  // Safe GPIO
+const int BULB2_PIN = 5;  // Safe GPIO
 
 #define RELAY_ON LOW
 #define RELAY_OFF HIGH
@@ -88,4 +88,5 @@ void setup() {
 
 void loop() {
   server.handleClient();
+  delay(10);
 }
